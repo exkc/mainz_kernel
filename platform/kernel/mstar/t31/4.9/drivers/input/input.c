@@ -152,7 +152,6 @@ int soft_trigger_event(unsigned long scancode,unsigned long keycode){
 		pr_err("Use KEY_POWER as default key, keycode =0x%4x\n", keycode);
 		keycode = KEY_POWER;
 	}
-#endif
 
 	/* Hold wake lock for a while until Android really waking up*/
 	__pm_wakeup_event(ws, 5 * MSEC_PER_SEC);
@@ -162,6 +161,7 @@ int soft_trigger_event(unsigned long scancode,unsigned long keycode){
    input_report_key(ms_ir_dev, keycode, 0);
    input_sync(ms_ir_dev);
    return 1;
+#endif
 }
 EXPORT_SYMBOL(soft_trigger_event);
 

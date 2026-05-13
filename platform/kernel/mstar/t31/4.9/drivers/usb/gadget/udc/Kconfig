@@ -1,4 +1,4 @@
-#
+.
 # USB Gadget support on a system involves
 #    (a) a peripheral controller, and
 #    (b) the gadget driver using it.
