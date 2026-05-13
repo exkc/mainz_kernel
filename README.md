@@ -1,5 +1,5 @@
-# FireOS_FireTV_and_FireStick
+# Kernel for mainz Soc
 
-Originally downloaded from [https://www.amazon.com/gp/help/customer/display.html?ref_=hp_left_v4_sib&nodeId=G201452680](https://www.amazon.com/gp/help/customer/display.html?ref_=hp_left_v4_sib&nodeId=G201452680)https://www.amazon.com/gp/help/customer/display.html?ref_=hp_left_v4_sib&nodeId=G201452680
+it build but it dont boot
 
-Here I will keep track of code changes...
+![fuckmstar](fuckmstar.png)
