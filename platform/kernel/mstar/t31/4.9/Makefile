@@ -4,15 +4,6 @@ SUBLEVEL = 118
 EXTRAVERSION =
 NAME = Roaring Lionus
 
-# Generate links for MStar Drivers/Patches
-
-ifneq ($(BUILD_WITH_AOSP_MK),true)
-ifeq ($(BUILD_KERNLE_LOCAL_MK),true)
-$(shell ./genlink_kernel.sh)
-else
-$(shell ./genlink.sh)
-endif
-endif
 
 # *DOCUMENTATION*
 # To see a list of typical targets execute "make help"
@@ -589,9 +580,7 @@ config: scripts_basic outputmakefile FORCE
 	$(Q)$(MAKE) $(build)=scripts/kconfig $@
 
 %config: scripts_basic outputmakefile FORCE
-ifneq ($(BUILD_WITH_AOSP_MK),true)
-	./gen_cl.sh
-endif
+
 	$(Q)mkdir -p include/linux include/config
 	$(Q)$(MAKE) $(build)=scripts/kconfig $@
 
