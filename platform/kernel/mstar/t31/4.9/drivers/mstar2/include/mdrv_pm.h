@@ -79,11 +79,29 @@ typedef enum
 
 typedef enum
 {
+
+// https://github.com/TCLOpenSource/mt9221/blob/098aa173622fa59a5531b9b01d8f9fc3b0e539f8/drivers/mstar2/include/mdrv_pm.h#L180
+// TODO :Remove.? 
+// whta? ig those are the older one but my mainz hal need newer one bc i riped from different kernl 
     E_PM_STATE_STORE_INFO,
     E_PM_STATE_SUSPEND_PREPARE,
     E_PM_STATE_POWER_OFF_AC,
     E_PM_STATE_POWER_OFF_DC,
     E_PM_STATE_POWER_ON_DC,
+
+//newer one from  newer kernel
+
+    E_PM_STATE_SUSPEND_PRE = 0x00,
+    E_PM_STATE_SUSPEND,
+    E_PM_STATE_SUSPEND_LATE,
+    E_PM_STATE_SUSPEND_NOIRQ,
+    E_PM_STATE_RESUME_NOIRQ,
+    E_PM_STATE_RESUME_EARLY,
+    E_PM_STATE_RESUME,
+    E_PM_STATE_RESUME_COMPLETE,
+    E_PM_STATE_REBOOT_NOTIFY,
+    E_PM_STATE_POWER_OFF_PRE,
+    E_PM_STATE_POWER_OFF,
 
     /* Refine naming. */
     E_PM_STATE_DC_OFF = E_PM_STATE_POWER_OFF_AC,

@@ -54,17 +54,14 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///
-/// @file   mdrv_mpool.h
-/// @brief  MALLOC Driver Interface
+/// @file   mdrv_cache.h
+/// @brief  MStar Cache flush Interface
 /// @author MStar Semiconductor Inc.
 ///
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef _DRV_MPOOL_H_
-#define _DRV_MPOOL_H_
-
-#include "mdrv_mpool_io.h"
-#include "mdrv_mpool_st.h"
+#ifndef _DRV_MCACHE_H_
+#define _DRV_MCACHE_H_
 
 //-------------------------------------------------------------------------------------------------
 //  Driver Capability
@@ -81,8 +78,7 @@
 //-------------------------------------------------------------------------------------------------
 //  Function and Variable
 //-------------------------------------------------------------------------------------------------
-int MDrv_MPOOL_IOC_FlushDache(DrvMPool_Info_t i);
-
+void Chip_Flush_Cache_All(void);
 
 #endif // _DRV_MPOOL_H_
 
